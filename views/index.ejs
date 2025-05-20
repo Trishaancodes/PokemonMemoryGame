@@ -1,0 +1,47 @@
+<%- include("partials/header") %>
+
+<div class="container py-4">
+  <h1 class="text-center mb-4">   <img src="https://upload.wikimedia.org/wikipedia/commons/9/98/International_Pokémon_logo.svg" alt="Pokémon" height="50"/>
+  Memory Card Game</h1>
+
+<div class="game-wrapper p-4 rounded-4 shadow-lg bg-dark bg-opacity-50">
+  <div class="d-flex flex-wrap justify-content-center gap-3 mb-4">
+    <select id="difficulty" class="form-select w-auto">
+      <option value="easy">Easy</option>
+      <option value="medium">Medium</option>
+      <option value="hard">Hard</option>
+    </select>
+
+    <select id="theme" class="form-select w-auto">
+      <option value="light">Light</option>
+      <option value="dark">Dark</option>
+    </select>
+
+    <button id="startBtn" class="btn btn-success">Start</button>
+    <button id="resetBtn" class="btn btn-warning">Reset</button>
+    <button id="powerUpBtn" class="btn btn-primary">Power-Up</button>
+  </div>
+
+
+  <div class="row text-center mb-3">
+    <div class="col-sm">
+      <strong>Clicks:</strong> <span id="clicks">0</span>
+    </div>
+    <div class="col-sm">
+      <strong>Matched:</strong> <span id="matched">0</span> /
+      <span id="totalPairs">0</span>
+    </div>
+    <div class="col-sm">
+      <strong>Time Left:</strong> <span id="timer">--</span>s
+    </div>
+  </div>
+
+<div id="game-board" class="row justify-content-center g-3">
+  <div class="card-pokemon col-2">
+  </div>
+</div>
+
+</div>
+</div>
+
+<%- include("partials/footer") %>
